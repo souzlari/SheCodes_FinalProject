@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Recife</title>
+    <style>
+      body {
+        background-image: linear-gradient(rgb(224, 48, 48), rgb(252, 252, 119));
+      }
+      h1 {
+        text-align: center;
+        color: #ffffff;
+      }
+
+      h2 {
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        color: #ffffff;
+        font-size: 18px;
+        padding: 15px;
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 15px;
+        margin: 20px 0 10px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #ffa600;
+        color: white;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+      }
+
+      .learn-more {
+        color: #ff9100;
+        text-decoration: none;
+        font-size: 12px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        color: #ffa600;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><strong>I love Recife</strong></h1>
+      <h2><em>There's lots of History around here!</em></h2>
+      <img
+        src="https://destinosnotaveis.com.br/wp-content/uploads/2020/03/Rua-do-Bom-Jesus-Recife-1024x576.jpg"
+        alt="Old Recife"
+      />
+      <p>
+        "From the picturesque canals and brightly painted colonial buildings of
+        its old town to its skyscraper - and palm-fringed beaches, Recife's
+        skyline reflects its personality - a bold blend of traditionalism and
+        modernism whose free spirit shines during its legendary Carnival
+        celebrations."
+      </p>
+      <a
+        href="https://www.tripadvisor.com/Tourism-g304560-Recife_State_of_Pernambuco-Vacations.html"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on TripAdvisor
+      </a>
+      <button class="trip-button">🌎 I want to visit Recife</button>
+      <p class="footer">
+        This page was built by
+        <a href="https://www.linkedin.com/in/souzlari/" target="_blank">
+          Lari Souza
+        </a>
+      </p>
+    </div>
+    <script>
+      function trip() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let visit = prompt("Are you interested in visiting Recife?");
+        let h1 = document.querySelector("h1");
+        if (visit === "yes") {
+          h1.innerHTML =
+            "Hi, " +
+            name +
+            "! We'll be in touch by e-mail, so we can plan your trip!";
+        } else {
+          h1.innerHTML = "What a pity, maybe next time! 😉";
+        }
+      }
+      let tripButton = document.querySelector(".trip-button");
+      tripButton.addEventListener("click", trip);
+    </script>
+  </body>
+</html>
